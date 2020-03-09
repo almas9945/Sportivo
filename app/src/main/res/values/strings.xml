@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">sporty</string>
+    <string name="btn_sign_up" />
+    <string name="btn_link_login" />
+    <string name="female" />
+    <string name="male" />
+    <string name="hint_password" />
+    <string name="hint_gender" />
+    <string-array name="names">
+        <item>Qualification</item>
+        <item>Matric</item>
+        <item>Intermediate</item>
+        <item>Bs</item>
+        <item>MS</item>
+    </string-array>
+    <string-array name="names1">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="names2">
+        <item>Game played</item>
+        <item>Cricket</item>
+        <item>Base Ball</item>
+        <item>Badminton</item>
+        <item>Table Tennis</item>
+        <item>Lawn Tennis</item>
+        <item>Squash</item>
+        <item>Basket Ball</item>
+        <item>Hand Ball</item>
+        <item>Volley Ball</item>
+    </string-array>
+</resources>
