@@ -17,6 +17,7 @@ public class Registration2 extends AppCompatActivity {
     TextView text,text1,editName;
     Button btnNext;
     String s;
+    Double r;
     SQLiteDatabase sqLiteDatabaseObj;
     String SQLiteDataBaseQueryHolder ;
     SQLiteHelper sqLiteHelper;
@@ -26,7 +27,7 @@ public class Registration2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration2);
-        editName = findViewById(R.id.text1);
+        editName = findViewById(R.id.game);
         editmatch = findViewById(R.id.editmatch);
         editwon = findViewById(R.id.editwon);
         editpoints = findViewById(R.id.editpoints);
@@ -37,8 +38,8 @@ public class Registration2 extends AppCompatActivity {
         Intent intent = getIntent();
         String str = intent.getStringExtra("message1");
         String str1 = intent.getStringExtra("message2");
-        text.setText(str);
-        editName.setText(str1);
+        text.setText(str1);
+        editName.setText(str);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,22 +49,23 @@ public class Registration2 extends AppCompatActivity {
                 // Creating SQLite table if dose n't exists.
                 SQLiteTableBuild();
                 CheckEditTextStatus ();
-                senddata ();
+                //senddata ();
+                openActivityregister();
                 //openActivityregister();
                 // Checking EditText is empty or Not.
 
             }});}
     public void openActivityregister() {
-        Intent intent = new Intent(this, page1.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
             public void rank_player(){
         String won=editwon.getText().toString();
         String match=editmatch.getText().toString();
-        Double w=Double.parseDouble(won) ;
-        Double m=Double.parseDouble(match);
+        double w=Double.parseDouble(won) ;
+        double m=Double.parseDouble(match);
          // if(text.10getText().toString()=="Badminton")
-                Double r=((w/m)*100);
+                double r=((w/m)*100);
            s=Double.toString(r);
           text1.setText(s);
           System.out.print(( "out"+Double.toString(r)));
@@ -89,8 +91,32 @@ public class Registration2 extends AppCompatActivity {
                     // Closing SQLite database object.
                    sqLiteDatabaseObj.close();
                     // Printing toast message after done inserting.
-                    Toast.makeText(Registration2.this, "Data inserted", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registration2.this,"User Registered Successfully", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registration2.this,"Welcome  "+ editName.getText().toString(), Toast.LENGTH_LONG).show();
+
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // This block will execute if any of the registration EditText is empty.
                 else {
                     // Printing toast message if any of EditText is empty.
@@ -118,11 +144,11 @@ public class Registration2 extends AppCompatActivity {
     }
     public void senddata () {
         if (EditTextEmptyHolder == true) {
-            int  str1 =Integer.parseInt(s);
+            String  str1 =s;
             //String str2 = r.getText().toString();
             Intent intent = new Intent(Registration2.this, page1.class);
             intent.putExtra("message1", str1);
-           // intent.putExtra("message2", str2);
+            //intent.putExtra("message2", str2);
             startActivity(intent);
         }
         else

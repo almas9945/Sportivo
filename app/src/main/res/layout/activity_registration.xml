@@ -6,16 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="0dp"
-    android:background="@drawable/image2"
+    android:background="#006400"
     android:gravity="center">
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="wrap_content"
+        android:layout_width="267dp"
+        android:tooltipText="@string/hint_gender"
+        android:textColor="@android:color/white"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        android:textColorHint="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.867" />
@@ -24,14 +27,16 @@
         android:id="@+id/prac"
         android:layout_width="269dp"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:ems="10"
         android:hint="Feasible Practice_session Time"
+        android:textColorHint="@android:color/white"
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <EditText
         android:id="@+id/title"
@@ -40,10 +45,25 @@
         android:layout_marginBottom="232dp"
         android:ems="10"
         android:hint="Age"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438" />
 
     <EditText
         android:id="@+id/pre_history"
@@ -53,40 +73,48 @@
         android:gravity="start|top"
         android:hint="Previous Sports History"
         android:inputType="textMultiLine"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.677" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/game"
         android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Full Name"
+        android:textColor="@android:color/white"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@android:color/white"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email"
+        android:textColor="@android:color/white"
         android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Email"
+        android:textColorHint="@android:color/white"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toTopOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@+id/game"
+        app:layout_constraintTop_toTopOf="@+id/game" />
 
     <EditText
         android:id="@+id/pass"
         android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/email"
@@ -97,40 +125,31 @@
         android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColorHint="@android:color/white"
         android:hint="Contact#"
         android:inputType="number"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.354" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
-
     <Button
         android:id="@+id/btn_next"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:text="Next"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.99" />
 
     <TextView
         android:id="@+id/textView2"
@@ -139,7 +158,7 @@
         android:text="Registration Form"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="22dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_next"
@@ -150,12 +169,14 @@
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
+        android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.608" />

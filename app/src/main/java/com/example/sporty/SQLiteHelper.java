@@ -1,5 +1,6 @@
 package com.example.sporty;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 class SQLiteHelper extends SQLiteOpenHelper {
@@ -38,5 +39,12 @@ class SQLiteHelper extends SQLiteOpenHelper {
 
         onCreate(db);
     }
+    public Cursor getdata()
+    {
+        SQLiteDatabase db =this.getWritableDatabase();
+        Cursor cursor=db.rawQuery("select * from TABLE_NAME",null );
+        return cursor;
+    }
+
 }
 

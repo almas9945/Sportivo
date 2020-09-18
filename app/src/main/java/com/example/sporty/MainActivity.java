@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 Button button;
-    Button LogInButton, RegisterButton ;
+    Button LogInButton, RegisterButton,deletbtn ;
     EditText Email, Password ;
     String EmailHolder, PasswordHolder;
     Boolean EditTextEmptyHolder;
@@ -29,16 +29,13 @@ Button button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button) findViewById(R.id.btnnext);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivityregister();
-            }
-        });
-        LogInButton = (Button)findViewById(R.id.btnlogin);
-        Email = (EditText)findViewById(R.id.editEmail);
-        Password = (EditText)findViewById(R.id.editPassword);
+
+        LogInButton = (Button) findViewById(R.id.btnlogin);
+       // deletbtn = (Button) findViewById(R.id.btndelete);
+        RegisterButton = (Button) findViewById(R.id.btnnext);
+
+        Email = (EditText) findViewById(R.id.editEmail);
+        Password = (EditText) findViewById(R.id.editPassword);
 
         sqLiteHelper = new SQLiteHelper(this);
 
@@ -49,18 +46,38 @@ Button button;
 
                 // Calling EditText is empty or no method.
                 CheckEditTextStatus();
-
+               //remove();
                 // Calling login method.
+               // senddata();
                 LoginFunction();
+
 
 
             }
         });
+
+        // Adding click listener to register button.
+        RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Opening new user registration activity using intent on button click.
+                Intent intent = new Intent(MainActivity.this, Registration.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
-    public void openActivityregister() {
-        Intent intent = new Intent(this, Registration.class);
-        startActivity(intent);
-    }
+public void remove(){
+    sqLiteDatabaseObj= sqLiteHelper.getWritableDatabase();
+    sqLiteDatabaseObj.delete(sqLiteHelper.TABLE__NAME2,null,null);
+    sqLiteDatabaseObj.execSQL("delete  from "+ SQLiteHelper.TABLE__NAME2);
+    Toast.makeText(MainActivity.this,"deleted.",Toast.LENGTH_LONG).show();
+
+    //sqLiteDatabaseObj.execSQL("TRUNCATE, table" + SQLiteHelper.TABLE_NAME);
+}
+    // Login function starts from here.
     public void LoginFunction(){
 
         if(EditTextEmptyHolder) {
@@ -126,7 +143,7 @@ Button button;
             Toast.makeText(MainActivity.this,"Login Successfully",Toast.LENGTH_LONG).show();
 
             // Going to Dashboard activity after login success message.
-            Intent intent = new Intent(MainActivity.this,page1.class);
+            Intent intent = new Intent(MainActivity.this, page1.class);
 
             // Sending Email to Dashboard Activity using intent.
             intent.putExtra(UserEmail, EmailHolder);
@@ -141,4 +158,6 @@ Button button;
 
         }
         TempPassword = "NOT_FOUND" ;
-}}
+    }
+
+}
