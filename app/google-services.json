@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1026993720501",
+    "firebase_url": "https://sporty-b2040.firebaseio.com",
+    "project_id": "sporty-b2040",
+    "storage_bucket": "sporty-b2040.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026993720501:android:f88614386b0287201042fc",
+        "android_client_info": {
+          "package_name": "com.example.sporty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026993720501-r8jpdur5nuh9tojuhp6knlsm8vjkvg2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sporty",
+            "certificate_hash": "cf267435c4c177de0297c45739253a46e4e98128"
+          }
+        },
+        {
+          "client_id": "1026993720501-ognohvil36t9926jviphnmfvbnlnj4dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWsYeZ7lHHcp6QIUt_zGp7APsTusbSt34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026993720501-ognohvil36t9926jviphnmfvbnlnj4dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
