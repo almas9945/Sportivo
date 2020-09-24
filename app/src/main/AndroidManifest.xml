@@ -4,16 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@android:color/holo_green_dark"
-        android:label="Sportivo"
+        android:icon="@drawable/sportivologo"
         android:logo="@drawable/sportivologo"
+        android:label="Sportivo"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".page3">
 
         </activity>
-        <activity android:name=".Registration2"></activity>
+        <activity android:name=".Registration2"> </activity>
         <activity android:name=".page2"></activity>
         <activity android:name=".Registration"></activity>
         <activity android:name=".page1">

@@ -50,12 +50,63 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     ]]>
 
     <TextView
-        android:id="@+id/matches_play"
-        android:layout_width="178dp"
+        android:id="@+id/game4"
+        android:layout_width="140dp"
         android:layout_height="39dp"
+        android:text="Matches won"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/game3"
+        android:layout_width="140dp"
+        android:layout_height="39dp"
+        android:text="Game"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <TextView
+        android:id="@+id/game2"
+        android:layout_width="140dp"
+        android:layout_height="39dp"
+        android:text="Matches "
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <TextView
+        android:id="@+id/matches_play"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
         android:layout_marginTop="52dp"
         android:text="Matches played"
         android:textColor="@android:color/white"
@@ -69,12 +120,12 @@
         android:id="@+id/ratingBar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="160dp"
         android:numStars="5"
         android:stepSize="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -91,7 +142,7 @@
 
     <TextView
         android:id="@+id/game"
-        android:layout_width="178dp"
+        android:layout_width="130dp"
         android:layout_height="39dp"
         android:text="game played"
         android:textColor="@android:color/white"
@@ -137,7 +188,7 @@
 
     <TextView
         android:id="@+id/won_matches"
-        android:layout_width="178dp"
+        android:layout_width="130dp"
         android:layout_height="39dp"
         android:layout_marginBottom="139dp"
         android:text="matches won"
@@ -152,7 +203,7 @@
 
     <TextView
         android:id="@+id/ratings"
-        android:layout_width="178dp"
+        android:layout_width="130dp"
         android:layout_height="39dp"
         android:text="Rating"
         android:textColor="@android:color/white"
@@ -175,8 +226,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar2"
+        app:layout_constraintVertical_bias="0.981" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
